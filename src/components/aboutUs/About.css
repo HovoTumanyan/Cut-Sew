@@ -1,0 +1,52 @@
+.about {
+  color: var(--primaryColor);
+}
+
+.about_title {
+  text-align: center;
+  font-size: var(--titleSize);
+  position: relative;
+}
+
+.about_title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 4px;
+  background: rgb(196, 196, 46);
+  border-radius: 2px;
+}
+
+.about_desc {
+  margin: 50px;
+  font-size: var(--fontSize);
+  line-height: 27px;
+  text-align: center;
+  text-wrap-style: balance;
+  font-weight: 600;
+  color: var(--primaryColor);
+  border: var(--mainBorder);
+  border-radius: 20px;
+  padding: 5px;
+}
+.company {
+  font-family: cursive;
+}
+
+.about_equipment_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about_contact {
+  border-radius: 20px;
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+}
+.about_contact_info {
+  color: var(--secondaryColor);
+}

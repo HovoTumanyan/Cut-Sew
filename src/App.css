@@ -1,0 +1,379 @@
+#root {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  --fontSize: 20px;
+  --mainBg: #0c1a27;
+  --primaryColor: #ffffff;
+  --secondaryColor: #c4c42e;
+  --titleSize: 30px;
+  --mainBorder: 1.8px dashed #c4c42e;
+  --bordered: 20px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  background-color: var(--mainBg);
+}
+.menu-icon-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.menu-icon.open {
+  opacity: 1;
+  transform: scale(1) rotate(360deg);
+}
+
+.menu-icon.close {
+  opacity: 0;
+  transform: scale(0) rotate(0deg);
+}
+
+.ant-btn {
+  color: var(--mob--secondaryColor) !important;
+  font-size: 20px;
+  border: 1px solid var(--mob--secondaryColor);
+  transition: all 1s !important;
+  backdrop-filter: blur(5px);
+}
+
+.ant-btn.ant-btn-icon-only {
+  width: 40px;
+  height: 40px;
+}
+
+.ant-drawer-content-wrapper {
+  width: unset !important;
+}
+
+.ant-drawer-body {
+  background-color: var(--mob--mainBg);
+}
+
+.ant-drawer-body > .ant-menu {
+  background-color: var(--mob--mainBg);
+  color: var(--mob--primaryColor);
+}
+
+.ant-drawer-body > .ant-menu li {
+  color: var(--mob--primaryColor);
+}
+
+.ant-menu-item-selected {
+  background-color: transparent !important;
+  color: var(--secondaryColor) !important;
+  transform: scale(1.2);
+}
+
+.ant-menu-item:hover {
+  background-color: transparent !important;
+  color: yellow !important;
+}
+
+.ant-layout-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1500;
+  text-align: right;
+}
+
+.ant-layout-footer {
+  background-color: #001529;
+  color: white;
+}
+
+.ant-card {
+  background: rgb(255 255 255 / 0%);
+  color: white;
+  border: var(--mainBorder);
+}
+
+.section {
+  scroll-margin-top: 70px;
+}
+
+.ant-menu-submenu-selected {
+  background-color: var(--secondaryColor) !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .main_banner {
+    background-attachment: scroll;
+  }
+
+  .main_banner h1 {
+    font-size: 45px;
+    padding-top: 20px;
+  }
+
+  .banner_hello_desc {
+    margin: 20px 0;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+  }
+
+  .ant-card-body {
+    display: flex;
+    align-items: center;
+    height: unset;
+    justify-content: flex-start;
+  }
+
+  .ant-card-bod y p,
+  h4 {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .price_card_price {
+    width: unset;
+  }
+
+  .scheme_title {
+    font-size: 30px;
+    color: white;
+  }
+
+  .scheme p {
+    margin-top: 0;
+  }
+
+  .scheme_chain {
+    text-align: center;
+    gap: inherit;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  :root {
+    --mob--mainBg: #0c1a27;
+    --mob--primaryColor: #ffffff;
+    --mob--secondaryColor: #c4c42e;
+    --mob--titleSize: 24px;
+    --mob--fontSize: 16px;
+    --mob--secondaryTitle: 20px;
+    --mob--mainBorder: 1px dashed #c4c42e;
+    --mob--bordered: 15px;
+  }
+
+  .main_banner {
+    height: auto;
+    background-attachment: scroll;
+  }
+
+  .main_banner h1 {
+    font-size: 30px;
+    padding-top: 50px;
+  }
+
+  .banner_connection {
+    font-size: var(--mob--secondarySize);
+  }
+
+  .banner_hello_desc {
+    background-color: unset;
+    margin: 20px 0;
+    text-align: center;
+    color: white;
+    font-size: var(--mob--secondarySize);
+  }
+
+  .process_icons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .icons_info {
+    padding-bottom: 20px;
+  }
+
+  .icons_info img {
+    width: 60px;
+  }
+
+  .about_title {
+    font-size: var(--mob--titleSize);
+  }
+  .about_contact {
+    margin: 0 20px;
+  }
+
+  .about_contact p {
+    font-size: 16px;
+  }
+
+  .about_desc {
+    line-height: unset;
+    font-size: var(--mob--fontSize);
+    margin: 20px;
+  }
+
+  .price-list h1 {
+    font-size: var(--mob--secondaryTitle);
+    margin: 60px 0;
+  }
+
+  .ant-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    height: unset;
+    text-align: center;
+  }
+
+  .ant-card-body p,
+  h4 {
+    text-align: center;
+    font-size: var(--mob--secondarySize);
+  }
+  .ant-collapse > .ant-collapse-item > .ant-collapse-header  {
+    padding: 10px 0 ;
+}
+  .ant-collapse-header-text {
+    font-size: 14px !important;
+  }
+  .ant-collapse-content-box {
+    font-size: 12px !important;
+  }
+  .ant-layout-header {
+    padding: 0 15px;
+    height: 0;
+  }
+  .ant-drawer-header {
+    background-color: var(--mob--mainBg) !important;
+    border: none !important;
+  }
+  .ant-drawer-header-title {
+    display: none !important;
+  }
+
+  .price-card-icon {
+    width: 25%;
+  }
+
+  .price_card_price {
+    width: unset;
+    text-align: center;
+  }
+
+  .text {
+    font-size: var(--mob--fontSize);
+  }
+
+  .tailoring_title {
+    font-size: var(--mob--titleSize);
+  }
+
+  .tailoring_desc {
+    font-size: var(--mob--fontSize);
+  }
+
+  .scheme {
+    height: auto;
+  }
+
+  .scheme_title {
+    font-size: 30px;
+    color: white;
+  }
+
+  .scheme p {
+    margin-top: 0;
+  }
+
+  .scheme_chain {
+    flex-direction: column;
+    text-align: center;
+    gap: inherit;
+  }
+
+  .scheme_items img {
+    width: 60px;
+  }
+  .print_way_title {
+    text-align: center;
+    font-size: var(--mob--titleSize);
+    padding: 35px 0;
+    position: relative;
+  }
+
+  .silkscreen,
+  .digi_print,
+  .thermal_app,
+  .sublimation,
+  .scheme,
+  .embroidery {
+    background-attachment: scroll;
+  }
+
+  .silkscreen_title {
+    font-size: var(--mob--secondaryTitle);
+    padding: 0;
+  }
+
+  .silkscreen_desc {
+    backdrop-filter: blur(2px);
+    font-size: var(--mob--fontSize);
+  }
+
+  .faq_title {
+    font-size: var(--mob--titleSize);
+    margin: 0;
+  }
+
+  .digi_print,
+  .thermal_app,
+  .sublimation,
+  .embroidery,
+  .silkscreen {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .footer {
+    padding: 0;
+  }
+  .footer_section h4 {
+    text-align: justify;
+  }
+
+  .footer_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0;
+    text-align: left;
+  }
+
+  .footer_copyright {
+    text-align: center;
+    font-size: 10px;
+  }
+}

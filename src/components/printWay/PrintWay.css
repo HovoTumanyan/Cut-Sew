@@ -1,0 +1,96 @@
+.print_way_title {
+  text-align: center;
+  font-size: var(--titleSize);
+  padding: 35px 0;
+  color: var(--primaryColor);
+  position: relative;
+}
+
+.print_way_title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--secondaryColor);
+  border-radius: 2px;
+}
+
+.silkscreen {
+  height: 600px;
+  background-image: url(../../assets/print/pr-1.jpg);
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.silkscreen_title {
+  text-align: center;
+  font-size: var(--titleSize);
+  padding: 35px 0;
+  color: var(--primaryColor);
+}
+
+.silkscreen_desc {
+  font-size: var(--fontSize);
+  line-height: 25px;
+  font-weight: 400;
+  text-align: justify;
+  margin: 35px;
+  color: var(--primaryColor);
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.192);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-top: 2px dashed var(--secondaryColor);
+  border-left: 2px dashed var(--secondaryColor);
+  position: relative;
+}
+
+.silkscreen {
+  height: 600px;
+  background-image: url(../../assets/print/pr-1.jpg);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.digi_print {
+  height: 600px;
+  background-image: url(../../assets/print/pr-2.jpg);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.thermal_app {
+  height: 600px;
+  background-image: url(../../assets/print/pr-3.jpg);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.sublimation {
+  height: 600px;
+  background-image: url(../../assets/print/pr-4.jpg);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.embroidery {
+  height: 600px;
+  background-image: url(../../assets/print/pr-5.jpg);
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
