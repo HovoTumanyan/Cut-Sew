@@ -6,10 +6,6 @@ import item5 from "./assets/items/item-5.jpg";
 import item6 from "./assets/items/item-6.jpg";
 import item7 from "./assets/items/item-7.jpg";
 import item9 from "./assets/items/item-9.jpg";
-import lek1 from "./assets/lekala/lek-1.jpg";
-import lek2 from "./assets/lekala/lek-2.jpg";
-import lek3 from "./assets/lekala/lek-3.jpg";
-import lek4 from "./assets/lekala/lek-4.jpg";
 
 const priceData = {
   tailoring: [
@@ -61,32 +57,6 @@ const priceData = {
       description: "Трикотажные многоразовые маски",
       price: "от 240₽",
       icon: item9,
-    },
-  ],
-  patterns: [
-    {
-      title: "Лекала футболки",
-      description: "Градация 200₽/размер",
-      basePrice: "База от 1000₽",
-      icon: lek1,
-    },
-    {
-      title: "Лекала свитшота",
-      description: "Градация 300₽/размер",
-      basePrice: "База от 2000₽",
-      icon: lek2,
-    },
-    {
-      title: "Лекала худи",
-      description: "Градация 500₽/размер",
-      basePrice: "База от 2500₽",
-      icon: lek3,
-    },
-    {
-      title: "Лекала поло",
-      description: "Градация 200₽/размер",
-      basePrice: "База от 1500₽",
-      icon: lek4,
     },
   ],
 };

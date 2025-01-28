@@ -47,6 +47,12 @@
   color: white;
   font-weight: 700;
 }
-.about_contact_info {
+
+.about_contact_info  {
   color: var(--secondaryColor);
+}
+
+.about_contact p > a:hover  {
+text-decoration: underline;
+color: white;
 }
