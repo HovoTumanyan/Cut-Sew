@@ -8,7 +8,7 @@ export default function PriceList() {
     <div className="price-list">
       <h1>
         ЦЕНЫ НА ПОШИВ ОДЕЖДЫ
-        <br />И РАЗРАБОТКУ ЛЕКАЛА
+        <br />ПРИ УСЛОВИИ ДАВАЛЬЧЕСКОГО СЫРЬЯ
       </h1>
       <Row gutter={[16, 16]}>
         {data.tailoring.map((item, index) => (
@@ -33,30 +33,6 @@ export default function PriceList() {
         ))}
       </Row>
 
-      <h2 className="price_line">
-        <hr />
-      </h2>
-      <Row gutter={[16, 16]}>
-        {data.patterns.map((item, index) => (
-          <Col xs={24} sm={24} lg={12} key={index}>
-            <div>
-              <Card className="price-card">
-                {item.icon && (
-                  <img
-                    src={item.icon}
-                    alt={item.title}
-                    className="price-card-icon"
-                  />
-                )}
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <div className="price-card-price">{item.basePrice}</div>
-              </Card>
-            </div>
-          </Col>
-        ))}
-      </Row>
-
       <p className="text">
         Наше швейное производство имеет большой опыт в пошиве одежды любых
         видов. Мы принимает заказ на пошив крупны и мелким оптом в Москве и
@@ -66,7 +42,7 @@ export default function PriceList() {
         демократичные цены.
       </p>
       <p className="text">
-        Так же наша компания занимается разработкой лекал и дизайном одежды.
+        Так же наша компания занимается разработкой дизайном одежды.
         Если вы давно хотели запустить свой бренд уличной одежды, платьев,
         повседневной одежды или любой другой одежды — вы пришли по адресу. Мы
         работаем со многими начинающими и успешными брендами одежды, многие из

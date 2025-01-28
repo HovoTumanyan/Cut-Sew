@@ -4,7 +4,6 @@ import scheme3 from "../../assets/scheme/scheme-3.png";
 import scheme4 from "../../assets/scheme/scheme-4.png";
 import "./TailoringMerch.css";
 
-
 export default function TailoringMerch() {
   return (
     <>
@@ -34,13 +33,20 @@ export default function TailoringMerch() {
                 почту
               </a>
               <br />
-              <span className="items_span">+7 (903) 788-80-03</span>
+              <span className="items_span">
+                <a
+                  style={{ color: "var(--secondaryColor)" }}
+                  href="tel:+79037888003"
+                >
+                  +7 (903) 788-80-03
+                </a>
+              </span>
             </p>
           </div>
           <div className="scheme_items">
             <img src={scheme2} alt="" />
             <p>
-              Разрабатываем лекала <br />и{" "}
+              Разрабатываем <br />и{" "}
               <span className="items_span">шьем образец</span>
             </p>
           </div>

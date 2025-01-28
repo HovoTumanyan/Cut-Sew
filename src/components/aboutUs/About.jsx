@@ -52,7 +52,9 @@ export default function About() {
           </p>
           <p>
             Телефон:{" "}
-            <span className="about_contact_info">+7 (903) 788-80-03</span>{" "}
+            <a className="about_contact_info" href="tel:+79037888003">
+              +7 (903) 788-80-03
+            </a>{" "}
             <br />
             Почта:{" "}
             <a

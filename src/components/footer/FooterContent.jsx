@@ -48,8 +48,8 @@ export default function FooterContent({
                 makaryan.sergey99@gmail.com
               </a>
             </li>
-            <li>Телефон: +7 (903) 788-80-03</li>
-            <li>Адрес: ул. Главная 123, Город, Страна</li>
+            <li>Телефон: <a href="tel:+79037888003">+7 (903) 788-80-03</a></li>
+            <li>Адрес: ул. Моршанская 6, Москва</li>
           </ul>
         </div>
       </div>
