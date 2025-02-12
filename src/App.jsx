@@ -9,7 +9,7 @@ import Banner from "./components/header/Banner";
 import About from "./components/aboutUs/About";
 import PriceList from "./components/priceList/PriceList";
 import TailoringMerch from "./components/tailoringMerch/TailoringMerch";
-import PrintWay from "./components/printWay/PrintWay";
+// import PrintWay from "./components/printWay/PrintWay";
 import Faq from "./components/faq/Faq";
 import FooterContent from "./components/footer/FooterContent";
 import { isMobileDevice } from "./utils/deviceUtils";
@@ -26,7 +26,7 @@ export default function App() {
   const [activeKey, setActiveKey] = useState(() =>
     getFromSession("activeKey", "1")
   );
-  
+
   useEffect(() => {
     saveToSession("activeKey", activeKey);
   }, [activeKey]);
@@ -36,11 +36,10 @@ export default function App() {
     const handleResize = () => {
       setIsMobile(isMobileDevice());
     };
-  
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  
 
   // Объект `sectionRefs` хранит ссылки на элементы секций страницы, чтобы к ним можно было легко обращаться.
   const sectionRefs = useRef({
@@ -55,7 +54,7 @@ export default function App() {
     const observer = createIntersectionObserver(
       (entries) => {
         if (!observerActive) return;
-  
+
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveKey(entry.target.dataset.key);
@@ -64,16 +63,15 @@ export default function App() {
       },
       { threshold: 0.5 }
     );
-  
+
     Object.values(sectionRefs.current).forEach((ref) => observer.observe(ref));
-  
+
     return () => {
       Object.values(sectionRefs.current).forEach((ref) =>
         observer.unobserve(ref)
       );
     };
   }, [observerActive]);
-  
 
   // При изменении активного ключа скроллим к соответствующей секции.
   useEffect(() => {
@@ -186,7 +184,7 @@ export default function App() {
           >
             <TailoringMerch />
           </div>
-          <PrintWay />
+          {/* <PrintWay /> */}  
           <Faq />
         </div>
       </Content>

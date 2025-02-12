@@ -46,19 +46,26 @@ const priceData = {
       price: "от 600₽",
       icon: item6,
     },
-    {
-      title: "Пошив дождевиков",
-      description: "Надежные дождевики",
-      price: "от 150₽",
-      icon: item7,
-    },
-    {
-      title: "Пошив масок",
-      description: "Трикотажные многоразовые маски",
-      price: "от 240₽",
-      icon: item9,
-    },
+    // {
+    //   title: "Пошив дождевиков",
+    //   description: "Надежные дождевики",
+    //   price: "от 150₽",
+    //   icon: item7,
+    // },
+    // {
+    //   title: "Пошив масок",
+    //   description: "Трикотажные многоразовые маски",
+    //   price: "от 240₽",
+    //   icon: item9,
+    // },
   ],
+};
+
+export const CONTACT_INFO = {
+  phone: "8 (903) 788-80-03",
+  name: "Сергей",
+  location: "Москва",
+  email: "makaryan.sergey99@gmail.com",
 };
 
 export const items = [

@@ -3,44 +3,49 @@ import Icon2 from "../../assets/icons/icon-2.png";
 import Icon3 from "../../assets/icons/right.png";
 import { ImPhone, ImPhoneHangUp } from "react-icons/im";
 import { FaLocationDot } from "react-icons/fa6";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { CONTACT_INFO } from "../../data";
 import "./Banner.css";
 
 export default function Banner() {
   const [showContact, setShowContact] = useState(false);
   const modalRef = useRef(null);
-  
-  const handleOutsideClick = (e) => {
-    if (modalRef.current && !modalRef.current.contains(e.target)) {
-      setShowContact(false);
-    }
-  };
+  const MODAL_OPEN_DELAY = 3000;
+  const MODAL_CLOSE_DELAY = 7000;
+
+  const handleOutsideClick = useCallback((e) => {
+    if (
+      !modalRef.current ||
+      !document.body.contains(e.target) ||
+      modalRef.current.contains(e.target)
+    )
+      return;
+
+    setShowContact(false);
+  }, []);
 
   useEffect(() => {
-    if (showContact) {
-      document.addEventListener("mousedown", handleOutsideClick);
-    } else {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    }
+    if (!showContact) return;
+
+    document.addEventListener("mousedown", handleOutsideClick, {
+      passive: true,
+    });
 
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
-  }, [showContact]);
+  }, [showContact, handleOutsideClick]);
 
   useEffect(() => {
-    const openModal = setTimeout(() => {
+    const timer = setTimeout(() => {
       setShowContact(true);
-    }, 3000);
+      setTimeout(
+        () => setShowContact(false),
+        MODAL_CLOSE_DELAY - MODAL_OPEN_DELAY
+      );
+    }, MODAL_OPEN_DELAY);
 
-    const closeModal = setTimeout(() => {
-      setShowContact(false);
-    }, 7000);
-
-    return () => {
-      clearTimeout(openModal);
-      clearTimeout(closeModal);
-    };
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -71,7 +76,10 @@ export default function Banner() {
           </div>{" "}
         </div>
       </div>
-      <div ref={modalRef} className={`modal_contact ${showContact ? "openContacts" : ""}`}>
+      <div
+        ref={modalRef}
+        className={`modal_contact ${showContact ? "openContacts" : ""}`}
+      >
         {showContact ? (
           <ImPhoneHangUp
             size={25}
@@ -87,10 +95,10 @@ export default function Banner() {
           />
         )}
         <a className="about_contact_info" href="tel:+79037888003">
-          8 (903) 788-80-03 <span style={{ color: "white" }}>(Сергей)</span>
+          {CONTACT_INFO.phone} <span style={{ color: "white" }}>({CONTACT_INFO.name})</span>
         </a>{" "}
         <FaLocationDot size={20} />
-        <span style={{ color: "white" }}>Москва</span>
+        <span style={{ color: "white" }}>{CONTACT_INFO.location}</span>
       </div>
     </div>
   );

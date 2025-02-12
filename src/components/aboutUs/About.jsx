@@ -1,5 +1,5 @@
+import { CONTACT_INFO } from "../../data";
 import "./About.css";
-
 export default function About() {
   return (
     <div className="about">
@@ -52,18 +52,18 @@ export default function About() {
           </p>
           <p>
             Телефон:{" "}
-            <a className="about_contact_info" href="tel:+79037888003">
-              +7 (903) 788-80-03
+            <a className="about_contact_info" href={`tel:${CONTACT_INFO.phone}`}>
+              {CONTACT_INFO.phone}
             </a>{" "}
             <br />
             Почта:{" "}
             <a
-              href="mailto:makaryan.sergey99@gmail.com"
+              href={`mailto:${CONTACT_INFO.email}`}
               target="_blank"
               rel="noopener noreferrer"
               className="about_contact_info"
             >
-              <strong>makaryan.sergey99@gmail.com</strong>
+              <strong>{CONTACT_INFO.email}</strong>
             </a>
           </p>
         </div>

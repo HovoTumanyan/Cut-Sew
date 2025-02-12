@@ -1,5 +1,5 @@
+import { CONTACT_INFO } from "../../data";
 import "./FooterContent.css";
-
 export default function FooterContent({
   items,
   handleMenuSelect,
@@ -45,10 +45,10 @@ export default function FooterContent({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                makaryan.sergey99@gmail.com
+                {CONTACT_INFO.email}
               </a>
             </li>
-            <li>Телефон: <a href="tel:+79037888003">+7 (903) 788-80-03</a></li>
+            <li>Телефон: <a href={`tel:${CONTACT_INFO.phone}`}>{CONTACT_INFO.phone}</a></li>
             <li>Адрес: ул. Моршанская 6, Москва</li>
           </ul>
         </div>

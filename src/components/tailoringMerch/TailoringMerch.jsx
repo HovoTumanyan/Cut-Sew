@@ -2,6 +2,7 @@ import scheme1 from "../../assets/scheme/scheme-1.png";
 import scheme2 from "../../assets/scheme/scheme-2.png";
 import scheme3 from "../../assets/scheme/scheme-3.png";
 import scheme4 from "../../assets/scheme/scheme-4.png";
+import { CONTACT_INFO } from "../../data";
 import "./TailoringMerch.css";
 
 export default function TailoringMerch() {
@@ -25,7 +26,7 @@ export default function TailoringMerch() {
             <p>
               Звоните или пишите на{" "}
               <a
-                href="mailto:makaryan.sergey99@gmail.com"
+                href={`mailto:${CONTACT_INFO.email}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "var(--secondaryColor)" }}
@@ -36,9 +37,9 @@ export default function TailoringMerch() {
               <span className="items_span">
                 <a
                   style={{ color: "var(--secondaryColor)" }}
-                  href="tel:+79037888003"
+                  href={`tel:${CONTACT_INFO.phone}`}
                 >
-                  +7 (903) 788-80-03
+                  {CONTACT_INFO.phone}
                 </a>
               </span>
             </p>
